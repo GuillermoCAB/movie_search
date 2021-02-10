@@ -3,7 +3,7 @@ import axios from 'axios'
 const api = axios.create({
   baseURL: process.env.REACT_APP_MOVIE_API,
   timeout: 1000,
-  headers: { 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZWExMmVkOTJhMGUxODBjZjgwMGQ3YTQ2MWU4OGNhOCIsInN1YiI6IjYwMjNlNTQwZDZjMzAwMDAzZTZhY2NiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Jslq86BQ7MsF1chDzrjFhMBg36Fix1EHzfQBW4FxKmU' }
+  headers: { 'Authorization': 'Bearer ' + process.env.REACT_APP_MOVIE_TOKEN }
 });
 
 export const getDiscoverMovies = async () => {

@@ -53,9 +53,9 @@ const Details: React.FC<ComponentType> = ({ isOpen, close, movie }) => {
 
       <Image custom="filter: blur(0.7px) brightness(0.5);" margin="0 0 0 0" height="281px" width="500px" src={setImage(url)} mobile="width: 280px;height: 158px;" />
 
-      <Container index="1" margin="-70px 0 0" direction="column" mobile="margin: -50px 0 0">
+      <Container index="1" margin="-100px 0 0" direction="column" mobile="margin: -60px 0 0">
 
-        <Title mobile="font: bold 16px/21px Nunito;" font="bold 30px/35px Nunito" color="var(--white)">{movie.title}</Title>
+        <Title align="center" mobile="font: bold 16px/21px Nunito;" font="bold 30px/35px Nunito" color="var(--white)">{movie.title}</Title>
 
         <Container>
           <ReactStars value={(movie.vote_average / 2) || 0} edit={false} count={5} size={vw > 450 ? 28 : 17} color2={'#ffd700'} />
@@ -64,7 +64,7 @@ const Details: React.FC<ComponentType> = ({ isOpen, close, movie }) => {
 
       </Container>
 
-      <Title mobile="font: normal 14px/19px Nunito;margin: 20px 12px;" margin="40px 12px 20px" font="normal 16px/21px Nunito">{movie.overview || "No information"}</Title>
+      <Title mobile="font: normal 14px/19px Nunito;margin: 26px 12px;" margin="40px 12px 20px" font="normal 16px/21px Nunito">{movie.overview || "No information"}</Title>
 
 
     </Container>
